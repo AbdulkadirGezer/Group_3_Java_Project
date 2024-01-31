@@ -6,5 +6,7 @@ public class TestFile {
 
         System.out.println("I forgot something");
 
+        System.out.println("One more line");
+
     }
 }

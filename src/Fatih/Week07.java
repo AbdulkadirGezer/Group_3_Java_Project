@@ -1,5 +1,6 @@
 package Fatih;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Week07 {
@@ -19,7 +20,7 @@ public class Week07 {
 
 
         int[] arr = {10, 9, 8, 7};
-        sort(arr);
+        System.out.println("Sorted form of "+Arrays.toString(arr)+ " is " + Arrays.toString(sort(arr)));
     }
 
 
@@ -46,7 +47,7 @@ public class Week07 {
      *
      * @param arr the array of integers to be sorted
      */
-    public static void sort(int[] arr) {
+    public static int [] sort(int[] arr) {
             //int[] arr = {10, 9, 8, 7};
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -58,8 +59,10 @@ public class Week07 {
                 }
             }
         }
-        System.out.println("Sorted form of given array is " + Arrays.toString(arr));
+        return arr;
     }
+
+
 
 
 }

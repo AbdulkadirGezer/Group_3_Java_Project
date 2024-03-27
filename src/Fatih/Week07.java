@@ -20,7 +20,13 @@ public class Week07 {
 
 
         int[] arr = {10, 9, 8, 7};
-        System.out.println("Sorted form of "+Arrays.toString(arr)+ " is " + Arrays.toString(sort(arr)));
+        System.out.println("\nAscending sorted form of "+Arrays.toString(arr)+ " is " + Arrays.toString(sortInAscending(arr)));
+
+
+        int[] arr2 = {10,20,7, 8, 90};
+        System.out.println("\nDescending sorted form of "+Arrays.toString(arr2)+ " is " + Arrays.toString(sortInAscending(arr2)));
+
+
     }
 
 
@@ -38,7 +44,7 @@ public class Week07 {
                 min = numbers[i]; // updates the minimum value if a smaller one is found
             }
         }
-        System.out.println("Minimum number of " + Arrays.toString(numbers) + " is: " + min);
+        System.out.println("\nMinimum number of " + Arrays.toString(numbers) + " is: " + min);
     }
 
 
@@ -47,7 +53,7 @@ public class Week07 {
      *
      * @param arr the array of integers to be sorted
      */
-    public static int [] sort(int[] arr) {
+    public static int [] sortInAscending(int[] arr) {
             //int[] arr = {10, 9, 8, 7};
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -63,6 +69,26 @@ public class Week07 {
     }
 
 
+    /**
+     * This method sorts an array of integers in descending order using the bubble sort algorithm.
+     *
+     * @param arr the array of integers to be sorted
+     */
+    public static int[] sortInDescending(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[i]< arr[j]){
+                    int temp= arr[i];
+                    arr[i] = arr[j];
+                    arr[j]= temp;
+
+                }
+
+            }
+
+        }
+        return arr;
+    }
 
 
 }

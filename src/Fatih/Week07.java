@@ -14,13 +14,13 @@ public class Week07 {
         numbers[4] = 44;
         numbers[5] = 57;
         numbers[6] = 6;*/
-        int [] numbers = {99, 12, 23, 32, 44, 57, 6};
-
+        int[] numbers = {99, 12, 23, 32, 44, 57, 6};
         findMin(numbers);
 
 
+        int[] arr = {10, 9, 8, 7};
+        sort(arr);
     }
-
 
 
     /**
@@ -39,4 +39,27 @@ public class Week07 {
         }
         System.out.println("Minimum number of " + Arrays.toString(numbers) + " is: " + min);
     }
+
+
+    /**
+     * This method sorts an array of integers in ascending order using the bubble sort algorithm.
+     *
+     * @param arr the array of integers to be sorted
+     */
+    public static void sort(int[] arr) {
+            //int[] arr = {10, 9, 8, 7};
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        System.out.println("Sorted form of given array is " + Arrays.toString(arr));
+    }
+
+
 }
